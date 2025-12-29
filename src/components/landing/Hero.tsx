@@ -36,6 +36,10 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <a 
               href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-secondary text-secondary-foreground font-subheading font-bold text-lg rounded-xl hover:bg-secondary/90 transition-all hover:scale-105 shadow-lg"
             >
               Get Started
@@ -43,6 +47,10 @@ const Hero = () => {
             </a>
             <a 
               href="#how-it-works"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector("#how-it-works")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-foreground/10 text-primary-foreground font-subheading font-semibold text-lg rounded-xl border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all"
             >
               Learn More
