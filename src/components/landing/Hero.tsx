@@ -1,7 +1,9 @@
 import { ArrowRight, Shield, Smartphone, Zap } from "lucide-react";
-import logoBlueOnLime from "@/assets/logo-blue-on-lime.png";
+import { AnimatedHeroText } from "@/components/ui/animated-hero";
 
 const Hero = () => {
+  const animatedWords = ["Minutes", "Seconds", "No Time", "A Flash"];
+
   return (
     <section className="relative min-h-screen flex items-center gradient-primary overflow-hidden">
       {/* Background pattern */}
@@ -20,10 +22,12 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Main heading */}
+          {/* Main heading with animated text */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Recover Your Florida Unclaimed Money in{" "}
-            <span className="text-secondary">Minutes</span>
+            <span className="inline-block h-[1.2em] min-w-[180px] md:min-w-[220px]">
+              <AnimatedHeroText titles={animatedWords} interval={2500} />
+            </span>
           </h1>
 
           {/* Subheading */}
