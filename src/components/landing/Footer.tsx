@@ -1,4 +1,4 @@
-import logoLimeOnBlue from "@/assets/logo-lime-on-blue.png";
+import logoBlueBg from "@/assets/logo-blue-bg.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +10,9 @@ const Footer = () => {
           {/* Brand column */}
           <div className="md:col-span-2">
             <img 
-              src={logoLimeOnBlue} 
+              src={logoBlueBg} 
               alt="Bolt Funds" 
-              className="h-10 w-auto mb-4 brightness-0 invert"
+              className="h-12 w-auto mb-4 rounded-md"
             />
             <p className="font-body text-background/70 max-w-sm mb-6">
               Helping Florida residents recover their unclaimed property quickly and securely. 
