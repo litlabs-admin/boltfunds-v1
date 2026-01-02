@@ -1,4 +1,5 @@
-import { QrCode, FileSignature, ScanFace, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import { QrCode, FileSignature, ScanFace, CheckCircle, Play } from "lucide-react";
 
 const steps = [
   {
@@ -22,6 +23,8 @@ const steps = [
 ];
 
 const HowItWorks = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <section id="how-it-works" className="py-20 md:py-28 bg-background">
       <div className="container">
@@ -37,6 +40,44 @@ const HowItWorks = () => {
             Our streamlined process makes claiming your money fast and easy. 
             Complete everything from your phone in just three simple steps.
           </p>
+        </div>
+
+        {/* Video Section */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div 
+            className="relative aspect-video bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 rounded-2xl overflow-hidden border border-border shadow-lg group cursor-pointer"
+            onClick={() => setIsPlaying(!isPlaying)}
+          >
+            {!isPlaying ? (
+              <>
+                {/* Placeholder content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  {/* Play button */}
+                  <button 
+                    className="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300"
+                    aria-label="Play video"
+                  >
+                    <Play className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground ml-1" fill="currentColor" />
+                  </button>
+                  <p className="mt-6 font-subheading text-muted-foreground text-sm md:text-base">
+                    Watch how it works in 2 minutes
+                  </p>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute top-4 left-4 w-3 h-3 bg-primary/30 rounded-full" />
+                <div className="absolute top-4 right-4 w-3 h-3 bg-secondary/50 rounded-full" />
+                <div className="absolute bottom-4 left-4 w-3 h-3 bg-secondary/50 rounded-full" />
+                <div className="absolute bottom-4 right-4 w-3 h-3 bg-primary/30 rounded-full" />
+              </>
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center bg-foreground/5">
+                <p className="font-subheading text-muted-foreground">
+                  Video placeholder - Replace with actual video
+                </p>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Steps grid */}
