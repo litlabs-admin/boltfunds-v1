@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoBlueBg from "@/assets/logo-blue-bg.png";
+import logoLimeBg from "@/assets/logo-lime-bg.png";
 import {
   Sheet,
   SheetContent,
@@ -30,7 +30,7 @@ const Header = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="/" className="flex items-center transition-transform duration-300 hover:scale-105">
           <img 
-            src={logoBlueBg} 
+            src={logoLimeBg} 
             alt="Bolt Funds" 
             className="h-10 md:h-12 w-auto rounded-md transition-all duration-300"
           />
