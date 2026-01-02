@@ -26,7 +26,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-secondary backdrop-blur-sm border-b border-secondary">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/5 backdrop-blur-sm">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="/" className="flex items-center">
           <img 
@@ -67,7 +67,7 @@ const Header = () => {
               <Menu className="w-6 h-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[280px] bg-secondary border-l border-border/20">
+          <SheetContent side="right" className="w-[280px] bg-background border-l border-border/20">
             <nav className="flex flex-col gap-6 mt-8">
               {navLinks.map((link) => (
                 <a 
