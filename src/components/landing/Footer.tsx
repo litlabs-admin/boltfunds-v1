@@ -1,4 +1,4 @@
-import logoBlueBg from "@/assets/logo-blue-bg.png";
+import logoLimeBg from "@/assets/logo-lime-bg.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand column */}
           <div className="md:col-span-2">
             <img 
-              src={logoBlueBg} 
+              src={logoLimeBg} 
               alt="Bolt Funds" 
               className="h-12 w-auto mb-4 rounded-md"
             />
